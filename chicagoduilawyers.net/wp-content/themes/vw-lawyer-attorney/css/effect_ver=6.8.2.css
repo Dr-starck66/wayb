@@ -1,0 +1,98 @@
+/* Image Hover Effect */
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 3em;
+  text-align: left;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  /*max-width: none;*/
+  width: calc(100% + 60px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-40px,0,0);
+  transform: translate3d(-40px,0,0);
+}
+
+
+
+.hovereffect .overlay:before {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 1px solid #fff;
+  content: '';
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-20px,0,0);
+  transform: translate3d(-20px,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+}
+
+.hovereffect:hover img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect:hover .overlay:before,
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*
+     FILE ARCHIVED ON 01:15:01 Jul 19, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:15:59 Aug 07, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.421
+  captures_list: 1.172
+  exclusion.robots: 0.098
+  exclusion.robots.policy: 0.084
+  esindex: 0.016
+  cdx.remote: 15.172
+  LoadShardBlock: 230.778 (3)
+  PetaboxLoader3.resolve: 156.61 (4)
+  PetaboxLoader3.datanode: 216.712 (5)
+  load_resource: 195.725
+  loaddict: 92.399
+*/
